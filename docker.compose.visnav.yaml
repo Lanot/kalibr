@@ -1,5 +1,6 @@
 # @See: https://github.com/ethz-asl/kalibr/wiki/installation
 # @See: https://github.com/ctu-mrs/kalibr_docker/blob/master/compose_session/compose.yaml
+# `Add VISNAV_WS="YOUR_ROS2/ROS1_PROJECT_PATH" to ~/.bashrc`
 services:
   kalibr:
     build:
