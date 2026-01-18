@@ -9,13 +9,11 @@ services:
     tty: true
     volumes:
       -  $VISNAV_WS/bags:/data
-      -  $VISNAV_WS/calibration/scripts:/scripts
-      -  $VISNAV_WS/calibration/kalibr:/catkin_ws/src
+      -  $VISNAV_WS/calibration/kalibr-scripts:/scripts
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /dev/dri:/dev/dri
     environment:
         DISPLAY: $DISPLAY
-        WORKSPACE: "/catkin_ws"
         QT_X11_NO_MITSHM: 1
     #command: "tail -f /dev/null"
     #command: bash -c "cd /data && export KALIBR_MANUAL_FOCAL_LENGTH_INIT=1 && echo 500 | rosrun kalibr kalibr_calibrate_cameras --models pinhole-radtan --topics /uav85/camera_front_throttled/image_raw/compressed --target april_6x6.yaml --bag camera_front.bag --bag-freq 5.0"
